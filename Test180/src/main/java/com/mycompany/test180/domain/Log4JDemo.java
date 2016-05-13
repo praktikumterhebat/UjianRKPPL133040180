@@ -18,16 +18,18 @@ public class Log4JDemo {
     private void showLog(String t) {
         
         if (logger.isDebugEnabled()) {
-            logger.debug("Ini adalah debug message :" + t);
+            logger.debug("Ini adalah debug message : " + t);
         }
 
         if (logger.isInfoEnabled()) {
-            logger.debug("Ini adalah info message :" + t);
+            logger.info("Ini adalah info message : " + t);
         }
-
-        logger.fatal("Ini adalah fatal message : " + t); 
-        logger.warn("Ini adalah warn message : " + t);
-        logger.error("Ini adalah error message : " + t);
+        
+        logger.warn("Ini adalah fatal message : " + t);
+        logger.error("Ini adalah warn message : " + t);
+        logger.fatal("Ini adalah error message : " + t); 
+        
+        
     }
     
     public static void main(String args []){
