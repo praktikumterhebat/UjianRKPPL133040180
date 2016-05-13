@@ -11,14 +11,12 @@ import org.apache.log4j.Logger;
  *
  * @author sb 604-15
  */
-public class Test {
+public class Log4JDemo {
 
-    final static Logger logger = Logger.getLogger(Test.class);
+    private static Logger logger = Logger.getLogger(Log4JDemo.class);
 
-    public static void main(String[] args) {
-
-        String t = "Contoh Log4J";
-
+    private void showLog(String t) {
+        
         if (logger.isDebugEnabled()) {
             logger.debug("Ini adalah debug message :" + t);
         }
@@ -27,9 +25,14 @@ public class Test {
             logger.debug("Ini adalah info message :" + t);
         }
 
-        logger.fatal("Ini adalah fatal message : " + t);
+        logger.fatal("Ini adalah fatal message : " + t); 
         logger.warn("Ini adalah warn message : " + t);
         logger.error("Ini adalah error message : " + t);
+    }
+    
+    public static void main(String args []){
+        Log4JDemo fs = new Log4JDemo();
+        fs.showLog("Contoh Log4J");
     }
 
 }
